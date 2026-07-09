@@ -5,8 +5,8 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title> Agenda Viva Cultura </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel='stylesheet' href='main.css'>
     <link rel="icon" type="image/x-icon" href="pag/favicon.ico">
 </head>
@@ -14,52 +14,332 @@
 <body>
 
     <header class="cabecalho">
-        <div class="d-inline-flex align-items-center container">
-            <nav class="menu">
-                <a class="nav-link" href="index.html"> Home </a>
-                <a class="nav-link" href="pag/eventos.html"> Evento </a>
-                <a class="nav-link" href="pag/espaco.html"> Espaços </a>
-                <a class="nav-link" href="pag/noticias.html"> Notícias </a>
-                <a class="nav-link" href="pag/sobre.html"> Sobre </a>
-                <a class="nav-link" href="pag/contato.html"> Contato </a>
-            </nav>
+        <nav class="navbar navbar-expand-lg container py-3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <div class="d-inline-flex align-items-center lpfv">
-                <div class="d-inline-flex align-items-center lupa">
-                    <img src="lupa.png.png" width="10%">
-                    <span> Buscar </span>
-                </div>
-                 <div class="d-inline-flex align-items-center fav">
-                    <img src="favorito.png.png" width="10%">
-                    <span> Favoritos </span>
-                </div>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="menu navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pag/eventos.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pag/espaco.html">Espaços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pag/noticias.html">Notícias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pag/sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pag/contato.html">Contato</a></li>
+                </ul>
             </div>
-        </div>
 
+            <div class="d-flex align-items-center lpfv ms-lg-auto">
+                <a href="#" class="d-inline-flex align-items-center lupa">
+                    <i class="bi bi-search"></i>
+                    <span>Buscar</span>
+                </a>
+                <a href="#" class="d-inline-flex align-items-center fav">
+                    <i class="bi bi-heart"></i>
+                    <span>Favoritos</span>
+                </a>
+                <a href="#" class="acessibilidade" aria-label="Acessibilidade">
+                    <i class="bi bi-universal-access"></i>
+                </a>
+            </div>
+        </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>
-                <span class="branco">Agenda</span>
-                <span class="linha-dois">
-                    <span class="rosa">Viva</span>
-                    <span class="azul">Cultura</span>
-                </span>
-            </h1>
-            <p>A cidade acontece aqui</p>
-            <a href="#" class="btn">Ver programação</a>
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-5 hero-content">
+                    <h1>
+                        <span class="branco">Agenda</span>
+                        <span class="linha-dois">
+                            <span class="rosa">Viva</span>
+                            <span class="azul">Cultura</span>
+                        </span>
+                    </h1>
+                    <p class="subtitulo-viva">A cidade acontece aqui</p>
+                    <a href="pag/eventos.html" class="btn btn-hero rounded-pill px-4">
+                        Ver programação <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+
+                <div class="col-lg-7">
+                    <div id="carrosselDestaque" class="carousel slide hero-card" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <div class="evento-card"
+                                    style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 35%, rgba(0,0,0,0.2) 100%), url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800');">
+                                    <span class="badge-destaque">DESTAQUE</span>
+                                    <div class="evento-info">
+                                        <span class="evento-categoria">Show</span>
+                                        <h2 class="evento-titulo">Luedji Luna</h2>
+                                        <p class="evento-desc">A potência da música baiana em uma noite inesquecível.
+                                        </p>
+                                        <p class="evento-meta"><i class="bi bi-calendar-event"></i> 24 MAI &bull; SÁB
+                                            &bull; 20H</p>
+                                        <p class="evento-meta"><i class="bi bi-geo-alt"></i> Teatro Municipal</p>
+                                        <a href="pag/eventos.html" class="btn btn-evento">Ver programação</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="evento-card"
+                                    style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 35%, rgba(0,0,0,0.2) 100%), url('https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=800');">
+                                    <span class="badge-destaque">DESTAQUE</span>
+                                    <div class="evento-info">
+                                        <span class="evento-categoria">Teatro</span>
+                                        <h2 class="evento-titulo">A Mulher que Virou Baobá</h2>
+                                        <p class="evento-desc">Uma narrative teatral emocionante e profunda.</p>
+                                        <p class="evento-meta"><i class="bi bi-calendar-event"></i> 22 MAI &bull; QUI
+                                            &bull; 19H30</p>
+                                        <p class="evento-meta"><i class="bi bi-geo-alt"></i> Sesc Tijuca</p>
+                                        <a href="pag/eventos.html" class="btn btn-evento">Ver programação</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-indicators carousel-indicators-custom">
+                                <button type="button" data-bs-target="#carrosselDestaque" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#carrosselDestaque" data-bs-slide-to="1"></button>
+                            </div>
+
+                            <button class="carousel-control-prev carousel-control-custom" type="button"
+                                data-bs-target="#carrosselDestaque" data-bs-slide="prev">
+                                <i class="bi bi-chevron-left"></i>
+                            </button>
+                            <button class="carousel-control-next carousel-control-custom" type="button"
+                                data-bs-target="#carrosselDestaque" data-bs-slide="next">
+                                <i class="bi bi-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
+    <section class="esta-semana py-5">
+        <div class="container text-dark">
+            <div class="row align-items-center mb-4 g-3">
+                <div class="col-md-4">
+                    <h2 class="titulo-secao-azul mb-0">Esta semana</h2>
+                </div>
+                <div class="col-md-8 d-flex justify-content-md-end align-items-center gap-2 overflow-x-auto py-1">
+                    <button class="btn btn-seta-semana"><i class="bi bi-chevron-left"></i></button>
+                    <div class="d-flex gap-2">
+                        <div class="dia-card"><span
+                                class="d-block text-muted text-uppercase small">Seg</span><strong>19</strong></div>
+                        <div class="dia-card"><span
+                                class="d-block text-muted text-uppercase small">Ter</span><strong>20</strong></div>
+                        <div class="dia-card"><span
+                                class="d-block text-muted text-uppercase small">Qua</span><strong>21</strong></div>
+                        <div class="dia-card"><span
+                                class="d-block text-muted text-uppercase small">Qui</span><strong>22</strong></div>
+                        <div class="dia-card"><span
+                                class="d-block text-muted text-uppercase small">Sex</span><strong>23</strong></div>
+                        <div class="dia-card"><span
+                                class="d-block text-muted text-uppercase small">Sáb</span><strong>24</strong></div>
+                        <div class="dia-card"><span
+                                class="d-block text-muted text-uppercase small">Dom</span><strong>25</strong></div>
+                    </div>
+                    <button class="btn btn-seta-semana"><i class="bi bi-chevron-right"></i></button>
+                </div>
+            </div>
 
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm card-evento-menor">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=400"
+                                class="card-img-top img-evento-grid" alt="Silva">
+                            <span class="badge bg-azul-tag position-absolute bottom-0 start-0 m-3">Música</span>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3">
+                            <h5 class="card-title fw-bold mb-3">Silva</h5>
+                            <p class="mb-1 text-muted small"><i class="bi bi-calendar3 me-2"></i>23 MAI &bull; SEX
+                                &bull; 21H</p>
+                            <p class="mb-3 text-muted small"><i class="bi bi-geo-alt me-2"></i>Circo Voador</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto border-top pt-2">
+                                <span class="text-azul-link fw-bold small">Ver mais</span>
+                                <i class="bi bi-bookmark text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm card-evento-menor">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=400"
+                                class="card-img-top img-evento-grid" alt="Teatro">
+                            <span class="badge bg-rosa-tag position-absolute bottom-0 start-0 m-3">Teatro</span>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3">
+                            <h5 class="card-title fw-bold mb-1 text-truncate">A Mulher que Virou Baobá</h5>
+                            <p class="mb-1 text-muted small"><i class="bi bi-calendar3 me-2"></i>22 MAI &bull; QUI
+                                &bull; 19H30</p>
+                            <p class="mb-3 text-muted small"><i class="bi bi-geo-alt me-2"></i>Sesc Tijuca</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto border-top pt-2">
+                                <span class="text-azul-link fw-bold small">Ver mais</span>
+                                <i class="bi bi-bookmark text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm card-evento-menor">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?q=80&w=400"
+                                class="card-img-top img-evento-grid" alt="Oficinas de cerâmica">
+                            <span class="badge bg-laranja-tag position-absolute bottom-0 start-0 m-3">Oficinas</span>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3">
+                            <h5 class="card-title fw-bold mb-3 text-truncate">Introdução à Cerâmica</h5>
+                            <p class="mb-1 text-muted small"><i class="bi bi-calendar3 me-2"></i>24 MAI &bull; SÁB
+                                &bull; 10H</p>
+                            <p class="mb-3 text-muted small"><i class="bi bi-geo-alt me-2"></i>Casa Laura Alvim</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto border-top pt-2">
+                                <span class="text-azul-link fw-bold small">Ver mais</span>
+                                <i class="bi bi-bookmark text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm card-evento-menor">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=400"
+                                class="card-img-top img-evento-grid" alt="Exposição">
+                            <span class="badge bg-roxo-tag position-absolute bottom-0 start-0 m-3">Exposições</span>
+                        </div>
+                        <div class="card-body d-flex flex-column p-3">
+                            <h5 class="card-title fw-bold mb-3 text-truncate">Pretas Potências</h5>
+                            <p class="mb-1 text-muted small"><i class="bi bi-calendar3 me-2"></i>Até 08 JUN &bull;
+                                TER-DOM</p>
+                            <p class="mb-3 text-muted small"><i class="bi bi-geo-alt me-2"></i>Museu de Arte do Rio</p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto border-top pt-2">
+                                <span class="text-azul-link fw-bold small">Ver mais</span>
+                                <i class="bi bi-bookmark text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <section class="categorias explore-categorias-section py-4 border-top border-bottom">
+        <div class="container text-dark">
+            <div class="d-flex flex-wrap justify-content-between align-items-center g-3">
+                <h2 class="titulo-cat-lado fw-bold fs-3 mb-0">Explore por categoria</h2>
+                <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 flex-grow-1 text-center">
+                    <div class="item-categoria"><i class="bi bi-music-note-beamed text-azul"></i><small>Música</small>
+                    </div>
+
+                    <div class="item-categoria">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#e91e8c" class="mb-1"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M16 6.5c0 2.2-2.5 4-5.5 4s-5.5-1.8-5.5-4 2.5-4 5.5-4 5.5 1.8 5.5 4M10.5 5a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1m2 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1m-2.5 3a2.5 2.5 0 0 0 3 0h-3Z" />
+                            <path
+                                d="M0 8.5c0 2.2 2.5 4 5.5 4q.442 0 .864-.045A6.5 6.5 0 0 1 5.5 5.5c0-.646.076-1.27.217-1.867A7 7 0 0 0 5.5 3.5 5.5 5.5 0 0 0 0 8.5m5.5 2a2.5 2.5 0 0 1-3 0h3ZM2.5 7a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1" />
+                        </svg>
+                        <small>Teatro</small>
+                    </div>
+
+                    <div class="item-categoria"><i class="bi bi-activity text-warning"></i><small>Dança</small></div>
+                    <div class="item-categoria"><i class="bi bi-film icon-roxo"></i><small>Cinema</small></div>
+                    <div class="item-categoria"><i class="bi bi-palette text-info"></i><small>Artes Visuais</small>
+                    </div>
+                    <div class="item-categoria"><i class="bi bi-book icon-rosa-claro"></i><small>Literatura</small>
+                    </div>
+                    <div class="item-categoria"><i class="bi bi-emoji-smile text-success"></i><small>Infantil</small>
+                    </div>
+                    <div class="item-categoria"><i class="bi bi-bank text-secondary"></i><small>Patrimônio</small></div>
+                    <div class="item-categoria"><i class="bi bi-egg-fried text-dark"></i><small>Gastronomia</small>
+                    </div>
+                    <div class="item-categoria"><i class="bi bi-three-dots text-muted"></i><small>Ver todas</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter py-4">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-lg-4 d-flex align-items-center gap-3">
+                    <div class="news-icon-circle"><i class="bi bi-envelope-open-fill"></i></div>
+                    <h4 class="fw-bold mb-0 text-white">Receba cultura toda semana</h4>
+                </div>
+                <div class="col-lg-3">
+                    <p class="mb-0 small text-light opacity-75">Novidades, destaques e eventos selecionados direto no
+                        seu e-mail.</p>
+                </div>
+                <div class="col-lg-5">
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control border-0" placeholder="Seu e-mail">
+                        <button type="submit" class="btn btn-news-submit">Quero receber</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-dark py-5">
+        <div class="container text-light">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3 white-text">Agenda Viva Cultura</h5>
+                    <p class="small text-secondary-f">A cidade acontece aqui. Cultura é presença, é diversidade, é
+                        união.</p>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="text-uppercase text-secondary fw-bold small mb-3">Institucional</h6>
+                    <ul class="list-unstyled d-grid gap-2 small">
+                        <li><a href="#" class="text-secondary-f text-decoration-none">Sobre</a></li>
+                        <li><a href="#" class="text-secondary-f text-decoration-none">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-secondary-f text-decoration-none">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="text-uppercase text-secondary fw-bold small mb-3">Ajuda</h6>
+                    <ul class="list-unstyled d-grid gap-2 small">
+                        <li><a href="#" class="text-secondary-f text-decoration-none">Como usar</a></li>
+                        <li><a href="#" class="text-secondary-f text-decoration-none">Perguntas frequentes</a></li>
+                        <li><a href="#" class="text-secondary-f text-decoration-none">Fale conosco</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="text-uppercase text-secondary fw-bold small mb-3">Parceiros</h6>
+                    <ul class="list-unstyled d-grid gap-2 small">
+                        <li><a href="#" class="text-secondary-f text-decoration-none">Seja um parceiro</a></li>
+                        <li><a href="#" class="text-secondary-f text-decoration-none">Espaços culturais</a></li>
+                        <li><a href="#" class="text-secondary-f text-decoration-none">Apoie a cultura</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="text-uppercase text-secondary fw-bold small mb-3">Siga a Agenda</h6>
+                    <div class="d-flex gap-3 fs-5 redes-sociais">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
