@@ -13,14 +13,16 @@
 
 <body>
 
-    <header class="cabecalho">
-        <nav class="navbar navbar-expand-lg container py-3">
+    <header class="cabecalho fixed-top">
+        <nav class="navbar navbar-expand-sm container py-3 position-relative">
+           
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="menu navbar-nav">
+           
+            <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
+                <ul class="menu navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="pag/eventos.html">Eventos</a></li>
                     <li class="nav-item"><a class="nav-link" href="pag/espaco.html">Espaços</a></li>
@@ -30,7 +32,8 @@
                 </ul>
             </div>
 
-            <div class="d-flex align-items-center lpfv ms-lg-auto">
+            
+            <div class="d-flex align-items-center lpfv ms-auto">
                 <a href="#" class="d-inline-flex align-items-center lupa">
                     <i class="bi bi-search"></i>
                     <span>Buscar</span>
@@ -243,18 +246,7 @@
                 <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 flex-grow-1 text-center">
                     <div class="item-categoria"><i class="bi bi-music-note-beamed text-azul"></i><small>Música</small>
                     </div>
-
-                    <div class="item-categoria">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#e91e8c" class="mb-1"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M16 6.5c0 2.2-2.5 4-5.5 4s-5.5-1.8-5.5-4 2.5-4 5.5-4 5.5 1.8 5.5 4M10.5 5a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1m2 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1m-2.5 3a2.5 2.5 0 0 0 3 0h-3Z" />
-                            <path
-                                d="M0 8.5c0 2.2 2.5 4 5.5 4q.442 0 .864-.045A6.5 6.5 0 0 1 5.5 5.5c0-.646.076-1.27.217-1.867A7 7 0 0 0 5.5 3.5 5.5 5.5 0 0 0 0 8.5m5.5 2a2.5 2.5 0 0 1-3 0h3ZM2.5 7a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1" />
-                        </svg>
-                        <small>Teatro</small>
-                    </div>
-
+                    <div class="item-categoria"><i class="bi bi-mask text-rosa"></i><small>Teatro</small></div>
                     <div class="item-categoria"><i class="bi bi-activity text-warning"></i><small>Dança</small></div>
                     <div class="item-categoria"><i class="bi bi-film icon-roxo"></i><small>Cinema</small></div>
                     <div class="item-categoria"><i class="bi bi-palette text-info"></i><small>Artes Visuais</small>
