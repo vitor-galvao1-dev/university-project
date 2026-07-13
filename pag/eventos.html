@@ -13,13 +13,13 @@
 
 <body>
 
-    <header class="cabecalho">
+    <header class="cabecalho fixed-top">
         <nav class="navbar navbar-expand-lg container py-3 position-relative">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            
+
             <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
                 <ul class="menu navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
@@ -47,9 +47,215 @@
         </nav>
     </header>
 
-    <main class="container py-5">
-        <h2 class="titulo-secao-azul">Programação Cultural</h2>
-        <p class="text-muted">Explore todos os eventos da cidade.</p>
+    <main class="content-eventos-page py-5">
+        <div class="container">
+
+
+            <div class="row mb-4 align-items-center position-relative section-header-prog">
+                <div class="col-md-8">
+                    <h1 class="text-white fw-bold display-4 mb-1">Programação</h1>
+                    <p class="text-secondary-f m-0">Descubra o melhor da cultura na sua cidade.</p>
+                </div>
+            </div>
+
+
+            <div class="row g-3 mb-5 align-items-center">
+
+                <div class="col-xl-7 col-lg-12">
+                    <div class="barra-cronograma d-flex align-items-center gap-2 p-2">
+                        <button class="btn-seta-time"><i class="bi bi-chevron-left"></i></button>
+                        <span class="text-white mx-2 btn-time-txt">Hoje</span>
+                        <button class="btn-time-pill active-pill">Esta semana</button>
+
+                        <div class="d-flex gap-2 dias-wrapper">
+                            <div class="dia-pill"><span>19</span><small>SEG</small></div>
+                            <div class="dia-pill"><span>20</span><small>TER</small></div>
+                            <div class="dia-pill"><span>21</span><small>QUA</small></div>
+                            <div class="dia-pill"><span>22</span><small>QUI</small></div>
+                            <div class="dia-pill"><span>23</span><small>SEX</small></div>
+                            <div class="dia-pill active-dia"><span>24</span><small>SÁB</small></div>
+                            <div class="dia-pill"><span>25</span><small>DOM</small></div>
+                        </div>
+                        <button class="btn-seta-time"><i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="col-xl-5 col-lg-12 d-flex flex-wrap gap-2 justify-content-xl-end justify-content-start">
+                    <button class="btn-cat-filter filter-musica active-musica"><i
+                            class="bi bi-music-note-beamed me-2"></i>Música</button>
+                    <button class="btn-cat-filter filter-teatro"><i class="bi bi-劇 me-2"></i><i
+                            class="bi bi-masks me-2"></i>Teatro</button>
+                    <button class="btn-cat-filter filter-oficinas"><i
+                            class="bi bi-person-workspace me-2"></i>Oficinas</button>
+                    <button class="btn-cat-filter filter-exposicoes"><i class="bi bi-image me-2"></i>Exposições</button>
+                </div>
+            </div>
+
+
+            <div class="row g-4">
+                <div class="col-lg-8 col-md-12">
+                    <div class="row g-4">
+                        <!-- Card 1: Silva -->
+                        <div class="col-md-6">
+                            <div class="card-prog-principal long-card d-flex flex-column justify-content-between"
+                                style="background-image: linear-gradient(to top, rgba(13,13,13,0.95) 20%, rgba(13,13,13,0.2)), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=600');">
+
+                                <!-- TOPO DO CARD: Categoria e Data alinhadas perfeitamente lado a lado -->
+                                <div class="d-flex justify-content-between align-items-start w-100">
+                                    <span class="badge-cat-prog bg-vinho-tag position-static">MÚSICA</span>
+                                    <div class="card-prog-data text-end m-0">
+                                        <span class="d-block fw-bold lh-1 fs-3">24</span>
+                                        <small class="text-uppercase text-muted"
+                                            style="font-size: 0.65rem; letter-spacing: 1px;">MAI <br> SÁB</small>
+                                    </div>
+                                </div>
+
+                                <!-- BASE DO CARD: Horário, Título, Local e Botão -->
+                                <div class="card-prog-body mt-auto">
+                                    <span class="card-prog-hora">21H</span>
+                                    <h3 class="card-prog-title text-white fw-bold mb-2">Silva</h3>
+                                    <p class="card-prog-local mb-3"><i class="bi bi-geo-alt me-1"></i>Circo Voador</p>
+                                    <a href="#" class="btn-ver-evento-prog">Ver evento <i
+                                            class="bi bi-chevron-right ms-1"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Card 2: A Mulher que Virou Baobá -->
+                        <div class="col-md-6">
+                            <div class="card-prog-principal long-card d-flex flex-column justify-content-between"
+                                style="background-image: linear-gradient(to top, rgba(13,13,13,0.95) 20%, rgba(13,13,13,0.2)), url('https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?q=80&w=600');">
+                                <div class="d-flex justify-content-between align-items-start w-100">
+                                    <span class="badge-cat-prog bg-terracota-tag">TEATRO</span>
+                                    <div class="card-prog-data text-end m-0">
+                                        <span class="d-block fw-bold lh-1 fs-3">24</span>
+                                        <small class="text-uppercase text-muted"
+                                            style="font-size: 0.65rem; letter-spacing: 1px;">MAI <br> SÁB</small>
+                                    </div>
+                                </div>
+                                <div class="card-prog-body mt-auto">
+                                    <span class="card-prog-hora">19H30</span>
+                                    <h3 class="card-prog-title text-white fw-bold mb-2">A Mulher que Virou Baobá</h3>
+                                    <p class="card-prog-local mb-3"><i class="bi bi-geo-alt me-1"></i>Sesc Tijuca</p>
+                                    <a href="#" class="btn-ver-evento-prog">Ver evento <i
+                                            class="bi bi-chevron-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Introdução à Cerâmica -->
+                        <div class="col-md-6">
+                            <div class="card-prog-principal long-card d-flex flex-column justify-content-between"
+                                style="background-image: linear-gradient(to top, rgba(13,13,13,0.95) 20%, rgba(13,13,13,0.2)), url('https://images.unsplash.com/photo-1565192647048-f997ded879f0?q=80&w=600');">
+                                <div class="d-flex justify-content-between align-items-start w-100">
+                                    <span class="badge-cat-prog bg-laranja-tag">OFICINAS</span>
+                                    <div class="card-prog-data text-end m-0">
+                                        <span class="d-block fw-bold lh-1 fs-3">24</span>
+                                        <small class="text-uppercase text-muted"
+                                            style="font-size: 0.65rem; letter-spacing: 1px;">MAI <br> SÁB</small>
+                                    </div>
+                                </div>
+                                <div class="card-prog-body mt-auto">
+                                    <span class="card-prog-hora">10H</span>
+                                    <h3 class="card-prog-title text-white fw-bold mb-2">Introdução à Cerâmica</h3>
+                                    <p class="card-prog-local mb-3"><i class="bi bi-geo-alt me-1"></i>Casa de Cultura
+                                        Laura Alvim</p>
+                                    <a href="#" class="btn-ver-evento-prog">Ver evento <i
+                                            class="bi bi-chevron-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Horizontal Inferior: Pretas Potências -->
+                        <div class="col-md-6">
+                            <div class="card-prog-principal long-card d-flex flex-column justify-content-between"
+                                style="background-image: linear-gradient(to top, rgba(13,13,13,0.95) 20%, rgba(13,13,13,0.2)), url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1000');">
+                                <div class="d-flex justify-content-between align-items-start w-100">
+                                    <span class="badge-cat-prog bg-laranja-dark-tag">EXPOSIÇÕES</span>
+                                    <div class="card-prog-data text-end m-0">
+                                        <span class="d-block fw-bold lh-1 fs-5 text-nowrap"
+                                            style="font-size: 0.95rem !important;">24 MAI - 08 JUN</span>
+                                    </div>
+                                </div>
+                                <div class="card-prog-body mt-auto">
+                                    <h3 class="card-prog-title text-white fw-bold mb-2">Pretas Potências</h3>
+                                    <p class="card-prog-local mb-3"><i class="bi bi-geo-alt me-1"></i>Museu de Arte do
+                                        Rio</p>
+                                    <a href="#" class="btn-ver-evento-prog">Ver evento <i
+                                            class="bi bi-chevron-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- COLUNA DIREITA - SESSÕES DO DIA -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="painel-sessoes p-4 h-100">
+                        <h2 class="text-white fw-bold fs-4 mb-4">Sessões do dia</h2>
+
+                        <div class="timeline-sessoes d-flex flex-column gap-4">
+                            <!-- Item 1 -->
+                            <div class="sessao-item d-flex align-items-center justify-content-between">
+                                <div class="sessao-hora">10H00</div>
+                                <div class="sessao-info flex-grow-1 px-3">
+                                    <span class="sessao-dot dot-laranja"></span>
+                                    <span class="sessao-nome">Introdução à Cerâmica</span>
+                                </div>
+                                <div class="sessao-local text-end">Casa de Cultura<br><small>Laura Alvim</small></div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="sessao-item d-flex align-items-center justify-content-between">
+                                <div class="sessao-hora">15H00</div>
+                                <div class="sessao-info flex-grow-1 px-3">
+                                    <span class="sessao-dot dot-vinho"></span>
+                                    <span class="sessao-nome">Contos da Cidade</span>
+                                </div>
+                                <div class="sessao-local text-end">Biblioteca Parque<br><small>Estadual</small></div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="sessao-item d-flex align-items-center justify-content-between">
+                                <div class="sessao-hora">17H00</div>
+                                <div class="sessao-info flex-grow-1 px-3">
+                                    <span class="sessao-dot dot-vinho"></span>
+                                    <span class="sessao-nome">Danças Urbanas</span>
+                                </div>
+                                <div class="sessao-local text-end">Centro Cultural<br><small>João Nogueira</small></div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="sessao-item d-flex align-items-center justify-content-between">
+                                <div class="sessao-hora">19H30</div>
+                                <div class="sessao-info flex-grow-1 px-3">
+                                    <span class="sessao-dot dot-terracota"></span>
+                                    <span class="sessao-nome">A Mulher que Virou Baobá</span>
+                                </div>
+                                <div class="sessao-local text-end">Sesc Tijuca</div>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="sessao-item d-flex align-items-center justify-content-between">
+                                <div class="sessao-hora">20H00</div>
+                                <div class="sessao-info flex-grow-1 px-3">
+                                    <span class="sessao-dot dot-vinho"></span>
+                                    <span class="sessao-nome">Chorinho no Coreto</span>
+                                </div>
+                                <div class="sessao-local text-end">Praça Tiradentes</div>
+                            </div>
+                            <!-- Item 6 -->
+                            <div class="sessao-item d-flex align-items-center justify-content-between">
+                                <div class="sessao-hora">21H00</div>
+                                <div class="sessao-info flex-grow-1 px-3">
+                                    <span class="sessao-dot dot-vinho"></span>
+                                    <span class="sessao-nome">Silva</span>
+                                </div>
+                                <div class="sessao-local text-end">Circo Voador</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
 
 
@@ -61,7 +267,7 @@
 
 
 
-     <section class="newsletter py-4">
+    <section class="newsletter py-4">
         <div class="container">
             <div class="row align-items-center g-3">
                 <div class="col-lg-4 d-flex align-items-center gap-3">

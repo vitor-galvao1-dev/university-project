@@ -62,7 +62,7 @@ body {
 
 .menu .nav-link.active,
 .menu .nav-link:hover {
-    color: #ffffff !important; 
+    color: #ffffff !important;
     text-shadow: 0px 0px 10px rgb(115, 22, 47), 0px 0px 10px rgb(115, 22, 47);
 }
 
@@ -507,6 +507,357 @@ h1 {
 
 .redes-sociais a:hover {
     color: white;
+}
+
+/* ==========================================================================
+   ===== PÁGINA DE EVENTOS (PROGRAMAÇÃO) =====
+   ========================================================================== */
+
+.content-eventos-page {
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    min-height: 100vh;
+}
+
+/* Grafismos Artísticos no Topo do Layout */
+.section-header-prog::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -80px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(242, 160, 61, 0.15) 0%, transparent 75%);
+    z-index: 0;
+}
+
+/* --- BARRA CRONOGRAMA --- */
+.barra-cronograma {
+    background-color: #141414;
+    border-radius: 50px;
+    border: 1px solid #222;
+}
+
+.btn-seta-time {
+    background: none;
+    border: none;
+    color: #555;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.btn-seta-time:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.btn-time-txt {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.btn-time-pill {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+
+.btn-time-pill.active-pill {
+    background-color: var(--cor-vinho);
+    color: #fff;
+}
+
+.dias-wrapper {
+    border-left: 1px solid #252525;
+    padding-left: 10px;
+}
+
+.dia-pill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    color: #777;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dia-pill span {
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.dia-pill small {
+    font-size: 0.6rem;
+    margin-top: 2px;
+}
+
+.dia-pill:hover {
+    color: #fff;
+    background-color: #222;
+}
+
+.dia-pill.active-dia {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+/* --- FILTROS DE CATEGORIAS --- */
+.btn-cat-filter {
+    background: none;
+    border: 1px solid #333;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-cat-filter:hover {
+    transform: translateY(-2px);
+}
+
+.filter-musica:hover,
+.active-musica {
+    border-color: var(--cor-vinho) !important;
+    background-color: rgba(115, 22, 47, 0.2);
+    color: #fff;
+}
+
+.filter-teatro:hover {
+    border-color: var(--cor-terracota) !important;
+    background-color: rgba(166, 52, 41, 0.2);
+}
+
+.filter-oficinas:hover {
+    border-color: var(--cor-laranja-claro) !important;
+    background-color: rgba(242, 160, 61, 0.2);
+}
+
+.filter-exposicoes:hover {
+    border-color: var(--cor-laranja-escuro) !important;
+    background-color: rgba(217, 88, 41, 0.2);
+}
+
+/* --- CARDS DE EVENTO PRINCIPAIS --- */
+.card-prog-principal {
+    border-radius: 16px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    padding: 1.5rem;
+    border: 1px solid #222 !important;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-prog-principal:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(217, 88, 41, 0.15);
+}
+
+.long-card { 
+    height: 380px; 
+}
+
+.wide-card {
+    min-height: 200px;
+    flex-direction: row !important;
+    align-items: flex-end;
+}
+
+.badge-cat-prog {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+}
+
+/* Mapeamento das suas cores nas Tags */
+.bg-vinho-tag {
+    background-color: var(--cor-vinho);
+}
+
+.bg-terracota-tag {
+    background-color: var(--cor-terracota);
+}
+
+.bg-laranja-tag {
+    background-color: var(--cor-laranja-claro);
+    color: #000;
+    font-weight: 800;
+}
+
+.bg-laranja-dark-tag {
+    background-color: var(--cor-laranja-escuro);
+}
+
+.card-prog-body {
+    width: 100%;
+    z-index: 2;
+}
+
+.card-prog-data {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-prog-data span {
+    color: var(--cor-branco);
+}
+
+.card-prog-data small {
+    line-height: 1.1;
+    color: #aaa;
+    display: block;
+}
+
+.card-prog-hora {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--cor-laranja-claro);
+}
+
+.card-prog-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--cor-laranja-claro);
+    display: block;
+    letter-spacing: -0.5px;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.card-prog-local {
+    font-size: 0.85rem;
+    color: #bbb;
+    margin-bottom: 1.5rem;
+}
+
+.btn-ver-evento-prog {
+    font-size: 0.8rem; 
+    color: var(--cor-laranja-claro); 
+    text-decoration: none; 
+    font-weight: 700; 
+    border: 1px solid var(--cor-laranja-claro); 
+    padding: 0.4rem 1.2rem; 
+    border-radius: 30px;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center; 
+    transition: all 0.3s ease; 
+}
+
+.btn-ver-evento-prog:hover {
+    background-color: var(--cor-laranja-claro); 
+    color: var(--cor-preto) !important;
+}
+
+.btn-ver-evento-prog i {
+    margin-left: 8px; 
+    font-size: 1.1rem; 
+}
+
+/* --- PAINEL DE SESSÕES (DIREITA) --- */
+.painel-sessoes {
+    background-color: #111113;
+    border-radius: 16px;
+    border: 1px solid #1f1f23;
+}
+
+.sessao-item {
+    border-bottom: 1px solid #1f1f23;
+    padding-bottom: 1rem;
+}
+
+.sessao-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.sessao-hora {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #aaa;
+    min-width: 55px;
+}
+
+.sessao-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sessao-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-laranja {
+    background-color: var(--cor-laranja-claro);
+}
+
+.dot-vinho {
+    background-color: var(--cor-vinho);
+}
+
+.dot-terracota {
+    background-color: var(--cor-terracota);
+}
+
+.sessao-nome {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #eee;
+}
+
+.sessao-local {
+    font-size: 0.8rem;
+    color: #aaa;
+    line-height: 1.2;
+}
+
+.sessao-local small {
+    color: #666;
+}
+
+/* Responsividade de ajuste */
+@media (max-width: 576px) {
+    .wide-card {
+        flex-direction: column !important;
+        align-items: flex-start;
+        min-height: 300px;
+    }
+
+    .dias-wrapper {
+        display: none !important;
+    }
+
+    /* Simplifica a barra no mobile extremo */
 }
 
 /* ===== RESPONSIVO ADICIONAL ===== */
