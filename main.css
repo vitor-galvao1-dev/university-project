@@ -502,12 +502,12 @@ h1 {
 }
 
 .text-secondary-f {
-    color: #888888 !important;
+    color: rgba(255, 255, 255, 0.6) !important;
 }
-
 .text-secondary-f:hover {
     color: var(--cor-laranja-claro) !important;
 }
+
 
 .redes-sociais a {
     color: rgba(255, 255, 255, 0.6);
@@ -876,8 +876,8 @@ h1 {
    ========================================================================== */
 
 
-.content-detalhes-page {
-    background-color: var(--cor-preto) !important;
+html, body, .content-detalhes-page {
+    background-color: #0D0D0D !important;
     color: var(--cor-branco);
 }
 
@@ -999,6 +999,34 @@ h1 {
     background-color: rgba(242, 160, 61, 0.05);
     border: 1px solid rgba(242, 160, 61, 0.15);
 }
+
+
+.bg-dark-input, 
+.bg-dark-input:focus {
+    background-color: #0d0d0d !important; 
+    color: #ffffff !important;           
+}
+
+
+.bg-dark-input::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important; 
+}
+
+
+.bg-dark-input option {
+    background-color: #0d0d0d !important; 
+    color: #ffffff !important;            
+}
+
+
+.bg-dark-input:-webkit-autofill,
+.bg-dark-input:-webkit-autofill:hover, 
+.bg-dark-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s; 
+}
+
+
 
 /* ===== RESPONSIVO ADICIONAL ===== */
 @media (max-width: 991.98px) {
