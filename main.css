@@ -24,6 +24,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     background-color: #ffffff;
+    padding-top: 30px !important;
 }
 
 
@@ -517,6 +518,7 @@ h1 {
     background-color: var(--cor-preto);
     color: var(--cor-branco);
     min-height: 100vh;
+    padding-top: 50px !important;
 }
 
 /* Grafismos Artísticos no Topo do Layout */
@@ -669,7 +671,7 @@ h1 {
 
 .card-prog-principal:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(217, 88, 41, 0.15);
+    box-shadow: 0px 20px 70px rgba(217, 88, 41, 0.371);
 }
 
 .long-card { 
@@ -730,7 +732,7 @@ h1 {
 
 .card-prog-data small {
     line-height: 1.1;
-    color: #aaa;
+    color: #ffffff;
     display: block;
 }
 
